@@ -7,42 +7,46 @@ color[] PALLATE = {#30bced, #d16014, #e3e4db, #23395b, #050401};
 //color[] PALLATE = {#a0006b, #ffb533, #f95c41, #9ec630, #ff959b};
 float randCol = random(0, PALLATE.length);
 
-float tileSize = 20;
+float tileSize = 50;
 float posX = 0;
 
 void setup(){
-  size (400, 400);
+  size (400, 400,P3D);
   stroke(#ffffff);
   noLoop();
-  //background(PALLATE[int(randCol)]);
+  background(#cccccc);
 };
+void mousePressed(){
+      save("screen-####.jpg");
+  if(key == 's'){
+    println("Saving...");
 
+    println("Done saving.");
+  }
+}
 void draw(){
   noFill();
-  background(PALLATE[int(randCol)]);
+  //background(PALLATE[int(randCol)]);
   for(int y =0; y<height; y += tileSize){
     for(int x =0; x<=width+1; x += tileSize){
       //ellipse(x+tileSize/2, y+tileSize/2, tileSize, tileSize);
+      line(x, y,x,y);
     }
   }  
-  for(int y =0; y<height; y += tileSize){
+  for(int y = 50 ; y<height-tileSize; y += 10){
     println(y);
-    for(int x =0; x<width; x += tileSize){
-      float randCol = random(0, PALLATE.length);
+      //translate(width/2,height/2);
+    //float randCol = random(0, PALLATE.length);
       color c = 0x00000000;
       fill(PALLATE[int(randCol)]);
       noStroke();
-      ellipse(x, y, 4, 4);
       stroke(PALLATE[int(randCol)]);
-            
-      //rect(x, y, tileSize, tileSize);
-      if (random(0, 1) > 0.5) {
-        line(x, y, x+tileSize, y+tileSize);
-      } else {
-        line(x+tileSize, y, x, y+tileSize);
-      }
+    line(0,y,100,y);
+    ellipse(0,y,5,5);
+    ellipse(100,y,5,5);
+    for(int x =0; x<width; x += tileSize){
       
-
     }
-  }  
+  }
+      //save("screen-####.jpg");
 }
