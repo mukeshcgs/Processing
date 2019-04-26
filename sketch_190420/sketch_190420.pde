@@ -16,14 +16,7 @@ void setup(){
   noLoop();
   background(#cccccc);
 };
-void mousePressed(){
-      save("screen-####.jpg");
-  if(key == 's'){
-    println("Saving...");
 
-    println("Done saving.");
-  }
-}
 void draw(){
   noFill();
   //background(PALLATE[int(randCol)]);
@@ -48,5 +41,5 @@ void draw(){
       
     }
   }
-      //save("screen-####.jpg");
+      save("screen-####.jpg");
 }
