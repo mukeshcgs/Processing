@@ -6,9 +6,9 @@ color[] PALLATE = {#30bced, #d16014, #e3e4db, #23395b, #050401};
 void setup() {
   size(500, 500); 
   background(BG);
-  img = loadImage("profile.jpg");
-  img.resize(500, 500);
-  noLoop();
+  img = loadImage("woman.jpg");
+  img.resize(400, 500);
+  //noLoop();
 }
 
 void draw() {

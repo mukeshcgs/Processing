@@ -19,7 +19,8 @@ void setup() {
   background(0, 10);
   //background(PALLATE[int(randCol)]);
   stroke(PALLATE[int(randCol)]);
-  //noLoop();
+  noLoop();
+  smooth(2);
   //colorMode(HSB, 125);
 };
 
@@ -45,7 +46,6 @@ void init() {
     vertex(vX, vY);
     popMatrix();
 
-
     float posX = radius * cos(a);
     float posY = radius * sin(a);
 
@@ -69,8 +69,6 @@ void init() {
   endShape();
   //phase += 0.01;  
   Zoff += 0.01;
-
-
 
   float randCol = random(0, PALLATE.length);
   noFill();
@@ -101,7 +99,9 @@ void show() {
 }
 void draw() {
   //noFill();
-  //background(BG,5);
+    smooth();
+
+  background(BG,5);
   translate(width / 2, height / 2);
   //ellipse(0, 0, 380, 380);
   init();
