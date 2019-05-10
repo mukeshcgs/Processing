@@ -25,7 +25,7 @@ class Particle {
     vY = 0.01;
     gravity = 1;
     life = 0;
-    maxLife = 50;
+    maxLife = 100;
     pIndex ++;
   }
 
@@ -40,8 +40,10 @@ class Particle {
       y += vY;
       vX -= random(-0.5, 0.5);
       vY -= random(-0.5, 0.5);
+      //d -= 0.01;
       //}
     }
+    fill(0);
     //if (y > 300) {
     //  vY *= -0.5;
     //  vX *= 0.9;

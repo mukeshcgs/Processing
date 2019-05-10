@@ -6,9 +6,9 @@ color[] PALLATE = {#30bced, #d16014, #e3e4db, #23395b, #050401};
 void setup() {
   size(500, 500); 
   background(BG);
-  img = loadImage("woman.jpg");
-  img.resize(400, 500);
-  //noLoop();
+  img = loadImage("lio.jpeg");
+  img.resize(500, 500);
+  noLoop();
 }
 
 void draw() {
@@ -23,7 +23,7 @@ void draw() {
   float tileSize = width / tilesX;
   for (int y = 0; y < img.height; y += tileSize) {
     for (int x = 0; x < img.width; x += tileSize) {
-        float randCol = random(0, PALLATE.length);
+      float randCol = random(0, PALLATE.length);
       fill(PALLATE[int(randCol)]);
       color c = img.get(x, y);
       float b = map(brightness(c), 0, 255, 1, 0);
@@ -31,7 +31,6 @@ void draw() {
       translate(x, y);
       ellipse(0, 0, b * tileSize, b * tileSize);
       popMatrix();
-      
     }
   }
 }
