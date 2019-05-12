@@ -20,7 +20,6 @@ void setup() {
   //background(PALLATE[int(randCol)]);
   stroke(PALLATE[int(randCol)]);
   noLoop();
-  smooth(2);
   //colorMode(HSB, 125);
 };
 

@@ -2,7 +2,7 @@ int total = 100;
 Particle[] parts;
 
 void setup() {
-  size(800, 800);
+  size(400, 400);
   noStroke();
   parts = new Particle[total];
   float ss = 0;
@@ -21,7 +21,7 @@ void draw() {
     parts[i].display();
     if (parts[i].isOffScreen()) {
     }
-    ellipse(50+d, 50+d, 100, 100);
+    //ellipse(50+d, 50+d, 100, 100);
     d += 0.1;
   }
 }
