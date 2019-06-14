@@ -1,6 +1,6 @@
 color FG = #111111;
 color BG = #f1f1f1;
-float tileSize = 30;
+float tileSize = 50;
 float posX = 0;
 
 //Random Color select
@@ -8,15 +8,18 @@ float posX = 0;
 //color[] PALLATE = {#1be7ff, #f8333c, #8f2d56, #6eeb83, #e4ff1a};
 //color[] PALLATE = {#333232, #4c5454, #f3a712, #db2b39, #447604};
 //color[] PALLATE = {#30bced, #d16014, #e3e4db, #23395b, #050401};
-color[] PALLATE = {#26547c, #ef476f, #ffd166, #23af82, #fcfcfc};
+color[] PALLATE = {#26547c, #ef476f, #ffd166, #23af82};
 //color[] PALLATE = {#a0006b, #ffb533, #f95c41, #9ec630, #ff959b};
 float randCol = random(0, PALLATE.length);
 
 void setup(){
-  size (400, 400);
+  //size (400, 400);
+  //size (2696, 3305); //iPad Cases & Skins
+  size (4600, 3000); //Laptop Skins
   stroke(#ffffff);
   noLoop();
-  //background(PALLATE[int(randCol)]);
+  background(0);
+    //background(PALLATE[int(randCol)]);
 };
 void mousePressed() {
 }
@@ -57,5 +60,5 @@ void draw(){
       }
 }
   }
-  save("screen-####.jpg");
+  save("screen-laptop-skins.jpg");
 }
