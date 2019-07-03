@@ -13,9 +13,9 @@ color[] PALLATE = {#26547c, #ef476f, #ffd166, #23af82};
 float randCol = random(0, PALLATE.length);
 
 void setup(){
-  //size (400, 400);
+  size (400, 400);
   //size (2696, 3305); //iPad Cases & Skins
-  size (4600, 3000); //Laptop Skins
+  //size (4600, 3000); //Laptop Skins
   stroke(#ffffff);
   noLoop();
   background(0);
